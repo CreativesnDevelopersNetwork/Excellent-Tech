@@ -4,7 +4,7 @@ import './navbar.css';
 import { Link } from 'react-router-dom';
 import { menuList } from './navlinks';
 
-const Navbar = () => {
+const MainNavbar = () => {
   const [toggleMenu, setToggleMenu] = useState(false);
 
   return (
@@ -13,18 +13,18 @@ const Navbar = () => {
         <div className="mediaNavbarLogo">
           <h1>Excellent<i className='goldText'>Tech</i></h1>
         </div>
+        <div className="mediaNavbar-links_container">
+        {menuList.map((item, index) => (
+          <p key={index}>
+            <Link to={item.url} className={item.cName} activeClassName={item.active}>
+              {item.title}
+            </Link>
+          </p>
+        ))}
+      </div>
       </div>
       <div className="mediaNavbar-sign">
-        <span  className="signIn">
-        <Link to="/login">
-          Log In
-        </Link>
-        </span>
-       <span>
-       <Link to="/signup">
-          <button type="button">Sign up</button>
-        </Link>
-       </span>
+       {/* Profile Icons here */}
       </div>
       <div className="mediaNavbar-menu">
         {toggleMenu
@@ -32,16 +32,17 @@ const Navbar = () => {
           : <RiMenu3Line color="#000" size={27} onClick={() => setToggleMenu(true)} />}
         {toggleMenu && (
         <div className="mediaNavbar-menu_container scale-up-center">
-          <div className="mediaNavbar-menu_container-links">
-          <p><a href="#home">Home</a></p>
-          <p><a href="#wgpt3">Why Us</a></p>
-          <p><a href="#main">Prospects</a></p>
-          <p><a href="#features">Features</a></p>
-          <p><a href="#features">Contact Us</a></p>
-          </div>
+             <div className="mediaNavbar-menu_container-links">
+               {menuList.map((item, index) => (
+              <p key={index}>
+               <Link to={item.url} className={item.cName} activeClassName={item.active}>
+              {item.title}
+              </Link>
+               </p>
+              ))}
+            </div>
           <div className="mediaNavbar-menu_container-links-sign">
-            <p>Sign in</p>
-            <button type="button">Sign up</button>
+            {/* profile here */}
           </div>
         </div>
         )}
@@ -50,4 +51,4 @@ const Navbar = () => {
   );
 };
 
-export default Navbar;
+export default MainNavbar;
