@@ -1,9 +1,12 @@
 import React from 'react';
+import "./admin.css"
 
 function Admin() {
    return (
     <>
-      ADMIN SIGN IN HERE!!   
+     <div className='area'>
+     ADMIN SIGN IN HERE!!
+     </div>  
     </>
   );
 }
