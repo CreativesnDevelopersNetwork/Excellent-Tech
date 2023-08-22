@@ -7,7 +7,8 @@ import Dashboard from "./Dashboard/Dashboard";
 import Login from "../components/Login/Login";
 import ForgotPassword from "./ForgotPassword";
 import UpdateProfile from "../components/UpdateProfile/UpdateProfile";
-import AgentForm from "../components/AddAgent/AddAgent"
+import AgentForm from "../components/AddAgent/AddAgent";
+import Admin from "../components/AdminDashboard/Admin"
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
               <Route path="/contactus" element={<ContactUs />} />
               <Route path="/forgot-password" element={<ForgotPassword />} />
               <Route path="/agentform" element={<AgentForm />} />
+              <Route path="/admin" element={<Admin />} />
               {/* Protected routes */}
               <Route path="/" element={<Dashboard />} />
               <Route path="/update-profile" element={<UpdateProfile />} />
