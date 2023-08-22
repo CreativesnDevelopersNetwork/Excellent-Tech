@@ -72,7 +72,7 @@ export default function Dashboard() {
              </Link>
           </Popover.Body>
           <Popover.Body>
-          <Link to="" className="adminsignIn">
+          <Link to="/admin" className="adminsignIn">
              Admin
              </Link>
           </Popover.Body>
