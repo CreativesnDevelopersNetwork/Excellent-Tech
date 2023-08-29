@@ -186,7 +186,7 @@
     justify-content: center;
     align-items: center;
 }
-.barLink:hover {
+.app-sidebar a:hover {
     color: white;
 }
 .barLink.active {
