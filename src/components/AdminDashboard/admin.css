@@ -1,11 +1,7 @@
-.area{
+.body{
     width: 100%;
     height: 100vh;
-    margin: 0;
-    overflow: hidden;
-    display: flex;
-    justify-content: center;
-    background-color: var(--app-container);
+    margin: 0;    
 }
 
 .app-container {
@@ -13,18 +9,22 @@
     display: flex;
     flex-direction: column;
     height: 100%;
+    background-color: var(--app-container);
     transition: 0.2s;
     max-width: 1800px;
 }
 
-.app-container button, .app-container input, .app-container optgroup, .app-container select, .app-container textarea {
-    font-family: 'DM Sans', sans-serif;
+.app-container .mediaNavbar{
+    background-color: var(--app-container);
 }
+
 .app-content {
     display: flex;
     height: 100%;
     overflow: hidden;
     padding: 16px 24px 24px 0;
+    background-color: var(--app-container);
+    border: 1px solid red;
 }
 .app-header {
     display: flex;
@@ -136,6 +136,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-right: 0.6rem;
 }
 .profile-btn {
     padding: 0;
