@@ -118,10 +118,9 @@ function Admin() {
         </div>
         )}
       </div>
-    </div>
-         
-     </div>
+      </div>    
       <ProjectBody /> 
+      </div>
     </>
   );
 }
