@@ -163,6 +163,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    border: 1px solid blue;
 }
 .app-sidebar-link {
     color: var(--main-color);
